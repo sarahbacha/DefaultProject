@@ -1,0 +1,1 @@
+{"type":"object","properties":{"city":{"type":"string"},"zipCode":{"type":"string"}},"required":["city","zipCode"]}
