@@ -1,0 +1,398 @@
+{
+  "generator-cedrus-api": {
+    "haveConfigFile": true,
+    "discover": {
+      "ask": false,
+      "apiConsumes": [
+        "application/json"
+      ],
+      "apiProduces": [
+        "application/json"
+      ]
+    },
+    "detail": {
+      "ask": false,
+      "isPublic": true,
+      "httpMethods": [
+        "get",
+        "put",
+        "post",
+        "patch",
+        "delete"
+      ],
+      "httpStatusCodes": [
+        "204",
+        "404",
+        "500"
+      ],
+      "versioning": {
+        "enabled": true,
+        "type": "uri",
+        "versionNumber": [
+          "v1"
+        ],
+        "uriOrder": "resourceFirst",
+        "contentTypeOrder": "applicationFirst",
+        "customHeaderName": "version"
+      },
+      "apiData": {
+        "returnDataType": "No"
+      },
+      "records": {
+        "limit": 10
+      },
+      "cache": {
+        "RedisEnable": false,
+        "RedisHost": "pub-redis-19334.dal-05.1.sl.garantiadata.com",
+        "RedisPort": "19334",
+        "RedisPassword": "zKvyYzznhsdvYwgq",
+        "RedisExpire": 180
+      },
+      "pagination": {
+        "PaginationEnable": true
+      },
+      "filter": {
+        "FilterEnable": false
+      },
+      "security": {
+        "enabled": false,
+        "type": "none",
+        "basicUser": "sarah.bacha94@gmail.com",
+        "basicPassword": "C3drus20!6"
+      },
+      "logging": {
+        "enabled": false
+      }
+    },
+    "deploy": {
+      "ask": false,
+      "apiApplicationType": "nodejs",
+      "openWhisk": {
+        "OpenWhiskEnable": false
+      },
+      "tls": {
+        "TLSEnable": false
+      },
+      "cloudFoundry": {
+        "appName": "",
+        "appMemory": ""
+      },
+      "javaOptions": {
+        "basePackage": "io.cedrus.apigen",
+        "packagingType": "jar",
+        "framework": [
+          "jaxrs",
+          "jaxrs"
+        ],
+        "springBootDeployment": "tomcat"
+      }
+    },
+    "multipleResources": {
+      "enabled": true,
+      "resources": [
+        {
+          "resourceName": "blaa",
+          "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"format\":\"\"},\"adress\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"format\":\"\"},\"zipCode\":{\"type\":\"string\",\"format\":\"\"}}},\"asf\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"format\":\"\"},\"address\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"format\":\"\"},\"zipCode\":{\"type\":\"string\",\"format\":\"\"}}}}}}}",
+          "isPublic": true,
+          "httpMethods": [
+            "get",
+            "put",
+            "post",
+            "patch",
+            "delete"
+          ],
+          "httpStatusCodes": [
+            "204",
+            "404",
+            "500"
+          ],
+          "requireTestDataType": "Test Data",
+          "apiFakerMappingFileProvided": true,
+          "apiFakeMappingFileType": "object",
+          "apiFakerMappingFileLocation": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "adress": {
+                "type": "object",
+                "properties": {
+                  "city": {
+                    "type": "string",
+                    "faker": "address.zipCode"
+                  },
+                  "zipCode": {
+                    "type": "string",
+                    "faker": "address.zipCode"
+                  }
+                }
+              },
+              "asf": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "object",
+                    "properties": {
+                      "city": {
+                        "type": "string",
+                        "faker": "address.zipCode"
+                      },
+                      "zipCode": {
+                        "type": "string",
+                        "faker": "address.zipCode"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "apiFakerMappingJsonType": "Data Schema",
+          "recordsLimit": "5",
+          "requireQuery": false,
+          "whichParameter": null,
+          "queryParameters": {
+            "get": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R5"
+              }
+            ],
+            "put": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R5"
+              }
+            ],
+            "post": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R5"
+              }
+            ],
+            "patch": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R5"
+              }
+            ],
+            "delete": [
+              {
+                "name": "revision",
+                "in": "header",
+                "description": "Needed Revision",
+                "required": true,
+                "type": "string",
+                "default": "R5"
+              }
+            ]
+          },
+          "fake_data": null
+        }
+      ],
+      "testingMode": false
+    },
+    "javaOptions": {
+      "basePackage": "io.cedrus.apigen",
+      "packagingType": "jar",
+      "framework": [
+        "jaxrs",
+        "jaxrs"
+      ],
+      "springBootDeployment": "tomcat"
+    },
+    "apiOverview": {
+      "apiName": "bla",
+      "apiBasePath": "/api",
+      "apiDescription": "This is sample API being generated by cedrus-api generator"
+    },
+    "dataInput": {
+      "dataInputType": "JSON Input"
+    },
+    "JSONExtraction": [
+      {
+        "resourceName": "blaa",
+        "jsonFilePath": "{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"format\":\"\"},\"adress\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"format\":\"\"},\"zipCode\":{\"type\":\"string\",\"format\":\"\"}}},\"asf\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"format\":\"\"},\"address\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\",\"format\":\"\"},\"zipCode\":{\"type\":\"string\",\"format\":\"\"}}}}}}}",
+        "isPublic": true,
+        "httpMethods": [
+          "get",
+          "put",
+          "post",
+          "patch",
+          "delete"
+        ],
+        "httpStatusCodes": [
+          "204",
+          "404",
+          "500"
+        ],
+        "requireTestDataType": "Test Data",
+        "apiFakerMappingFileProvided": true,
+        "apiFakeMappingFileType": "object",
+        "apiFakerMappingFileLocation": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "adress": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "faker": "address.zipCode"
+                },
+                "zipCode": {
+                  "type": "string",
+                  "faker": "address.zipCode"
+                }
+              }
+            },
+            "asf": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string",
+                      "faker": "address.zipCode"
+                    },
+                    "zipCode": {
+                      "type": "string",
+                      "faker": "address.zipCode"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "apiFakerMappingJsonType": "Data Schema",
+        "recordsLimit": "5",
+        "requireQuery": false,
+        "whichParameter": null,
+        "queryParameters": {
+          "get": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R5"
+            }
+          ],
+          "put": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R5"
+            }
+          ],
+          "post": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R5"
+            }
+          ],
+          "patch": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R5"
+            }
+          ],
+          "delete": [
+            {
+              "name": "revision",
+              "in": "header",
+              "description": "Needed Revision",
+              "required": true,
+              "type": "string",
+              "default": "R5"
+            }
+          ]
+        },
+        "fake_data": null,
+        "jsonSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "format": ""
+            },
+            "adress": {
+              "type": "object",
+              "properties": {
+                "city": {
+                  "type": "string",
+                  "format": ""
+                },
+                "zipCode": {
+                  "type": "string",
+                  "format": ""
+                }
+              }
+            },
+            "asf": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "format": ""
+                },
+                "address": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string",
+                      "format": ""
+                    },
+                    "zipCode": {
+                      "type": "string",
+                      "format": ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
